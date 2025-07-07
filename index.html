@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InmersionZen – Sesiones Express de Bienestar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0E7490',
+            secondary: '#F1FAEE',
+            accent: '#06D6A0',
+            dark: '#1D3557',
+            muted: '#A8DADC'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 }
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(20px)', opacity: 0 },
+              '100%': { transform: 'translateY(0)', opacity: 1 }
+            },
+            zoomIn: {
+              '0%': { transform: 'scale(1)' },
+              '100%': { transform: 'scale(1.05)' }
+            }
+          },
+          animation: {
+            fadeIn: 'fadeIn 1s ease-out forwards',
+            slideUp: 'slideUp 1s ease-out forwards',
+            zoomIn: 'zoomIn 0.3s ease forwards'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-secondary text-dark font-sans">
+
+  <!-- HERO -->
+  <section class="relative bg-cover bg-center h-screen flex items-center justify-center" style="background-image: url('https://img.freepik.com/free-photo/woman-relaxing-spa_3513016.jpg');">
+  <div class="bg-dark bg-opacity-60 absolute inset-0"></div>
+  <div class="relative z-10 text-center text-white px-6 animate-fadeIn">
+    <h1 class="text-5xl md:text-7xl font-bold mb-4 animate-slideUp">Recupera tu bienestar en solo 30 minutos</h1>
+    <p class="text-2xl md:text-3xl mb-6 animate-slideUp">Terapia de contraste express en Santa Fe · Reserva fácil vía app</p>
+
+    <!-- 📷 Imagen relacionada -->
+    <div class="flex justify-center mb-6 animate-fadeIn">
+      <img src="https://img.freepik.com/free-photo/zen-stones-with-spa-background_53876-43300.jpg?w=1380" 
+           alt="Piedras zen y ambiente de spa relajante" 
+           class="w-48 h-48 object-cover rounded-full shadow-lg ring-4 ring-accent ring-opacity-50 hover:scale-105 transition duration-500" />
+    </div>
+
+    <a href="#contact" class="bg-accent text-dark px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-teal-400 transition animate-slideUp">Reserva tu sesión</a>
+  </div>
+</section>
+
+
+  <!-- ABOUT SECTION -->
+  <section class="py-20 px-6 max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-6 text-dark animate-fadeIn">¿Qué es InmersionZen?</h2>
+    <p class="text-xl mb-10 text-dark animate-fadeIn">InmersionZen te ofrece sesiones de 30 minutos de terapia de contraste (calor + frío) pensadas para personas con agenda saturada que desean recuperar su bienestar de forma rápida, efectiva y natural. Sin filas, sin esperas, sin complicaciones.</p>
+    <div class="grid md:grid-cols-3 gap-8 animate-fadeIn">
+      <img src="https://img.freepik.com/free-ai-image/person-practicing-cold-exposure-metabolism_83038997.jpg" alt="Persona practicando exposición al frío para mejorar metabolismo" class="rounded-2xl shadow-xl transform transition-transform duration-300 hover:scale-105 cursor-pointer" />
+      <img src="https://img.freepik.com/free-ai-image/person-practicing-cold-exposure-metabolism_83004553.jpg" alt="Persona practicando terapia de frío para bienestar" class="rounded-2xl shadow-xl transform transition-transform duration-300 hover:scale-105 cursor-pointer" />
+      <img src="https://img.freepik.com/free-photo/full-shot-man-experiencing-cold-exposure-wellness_132314440.jpg" alt="Hombre experimentando terapia de contraste frío-calor" class="rounded-2xl shadow-xl transform transition-transform duration-300 hover:scale-105 cursor-pointer" />
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="bg-muted py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-6 animate-fadeIn">Beneficios de la terapia de contraste</h3>
+      <ul class="text-left text-lg space-y-4 text-dark animate-fadeIn">
+        <li>🌿 Reduce el estrés y mejora el enfoque mental</li>
+        <li>💧 Mejora la circulación y alivia la tensión muscular</li>
+        <li>⚡ Aumenta tu energía y mejora tu estado de ánimo</li>
+        <li>🕒 Ideal para ejecutivos con poco tiempo</li>
+        <li>🏢 Espacios limpios, seguros y modernos en Santa Fe</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- MAPA DE UBICACIÓN -->
+  <section class="py-12 px-6 max-w-4xl mx-auto animate-fadeIn">
+    <h3 class="text-3xl font-bold mb-6 text-center">Dónde encontrarnos</h3>
+    <div class="w-full h-64 rounded-xl overflow-hidden shadow-lg">
+      <iframe
+        class="w-full h-full"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.123456789!2d-99.2423456!3d19.3912345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff2a1b234567%3A0x123456789abcdef!2sSanta%20Fe%2C%20CDMX!5e0!3m2!1ses!2smx!4v1234567890"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Mapa ubicación Santa Fe"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact" class="py-24 px-6 bg-white">
+    <div class="max-w-3xl mx-auto animate-fadeIn">
+      <h4 class="text-4xl font-bold mb-8 text-center text-dark animate-slideUp">Agenda tu sesión express</h4>
+      <form action="https://formspree.io/f/mwkgbznk" method="POST" class="space-y-6">
+        <div>
+          <label class="block text-lg font-medium mb-2" for="name">Nombre completo</label>
+          <input id="name" type="text" name="name" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-4 focus:ring-accent focus:border-accent transition" required />
+        </div>
+        <div>
+          <label class="block text-lg font-medium mb-2" for="email">Correo electrónico</label>
+          <input id="email" type="email" name="email" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-4 focus:ring-accent focus:border-accent transition" required />
+        </div>
+        <div>
+          <label class="block text-lg font-medium mb-2" for="phone">Teléfono</label>
+          <input id="phone" type="tel" name="phone" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-4 focus:ring-accent focus:border-accent transition" />
+        </div>
+        <div>
+          <label class="block text-lg font-medium mb-2" for="message">Mensaje o comentario</label>
+          <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-4 focus:ring-accent focus:border-accent transition"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="bg-primary text-white px-10 py-4 rounded-full hover:bg-cyan-700 transition font-semibold animate-slideUp">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white py-6 text-center animate-fadeIn">
+    <p>© 2025 InmersionZen · Santa Fe · CDMX</p>
+    <p>Contacto: inmersionzen@gmail.com</p>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/5211234567890" target="_blank" aria-label="Contactar por WhatsApp" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 p-4 rounded-full shadow-lg text-white text-2xl flex items-center justify-center z-50 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6" aria-hidden="true">
+      <path d="M20.52 3.48A11.92 11.92 0 0012 0C5.37 0 0 5.37 0 12a11.89 11.89 0 001.66 6.06L0 24l5.95-1.56a11.91 11.91 0 006.05 1.66c6.63 0 12-5.37 12-12 0-3.21-1.26-6.23-3.48-8.52zM12 21.5a9.47 9.47 0 01-5.12-1.46l-.37-.23-3.54.93.94-3.46-.24-.37A9.5 9.5 0 1121.5 12c0 5.24-4.26 9.5-9.5 9.5zm5.15-7.2c-.28-.14-1.66-.82-1.92-.91-.26-.09-.44-.14-.62.14-.17.28-.66.91-.81 1.1-.15.18-.3.21-.58.07-.28-.14-1.18-.44-2.24-1.38-.83-.74-1.39-1.66-1.55-1.93-.16-.28-.02-.43.12-.57.12-.12.28-.31.42-.47.14-.16.19-.28.28-.47.09-.18.05-.34-.02-.48-.07-.14-.62-1.5-.85-2.07-.22-.55-.44-.47-.62-.48-.16-.01-.34-.01-.52-.01-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.28 0 1.35.98 2.66 1.11 2.85.14.18 1.9 2.9 4.6 4.06.64.28 1.14.45 1.53.58.64.21 1.22.18 1.68.11.51-.08 1.66-.68 1.9-1.33.24-.64.24-1.19.17-1.33-.07-.14-.26-.22-.54-.36z"/>
+    </svg>
+  </a>
+
+</body>
+</html>
